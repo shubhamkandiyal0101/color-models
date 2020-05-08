@@ -1,0 +1,174 @@
+/*for footer and navbar*/
+.footer {
+   /*position: fixed;*/
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.navbar-inverse .navbar-brand, .navbar-default .navbar-nav>li>a {
+	color: white;
+}
+.navbarCustom {
+	background: #792756; 
+	color: white !important;
+	height: 30px;
+}
+@media (max-width: 720px) {
+	#navbarCollapse {
+		background: #792756; 
+		padding-left: 20px;
+	}
+}
+/*ends here ~ navbarCustom*/
+
+/*common css*/
+.textAlignRight {
+	text-align: right;
+}
+.dottedUnderline {
+	border-bottom: 4px dotted #000;
+    text-decoration: none;
+}
+.padding0px {
+	padding: 0px;
+}
+.marginTop15px {
+	margin-top: 15px;
+}
+.marginTop50px {
+	margin-top: 50px;
+}
+.textAlignCenter {
+	text-align: center;
+}
+.indexBodyContainer {
+	margin-top: 100px;
+	/*height: 150vh;*/
+	/*overflow: scroll;*/
+}
+.completeWebSafeBox, .completeIndexBox, .completeContactBox {
+	border: solid 1px #D9EDF6;
+	border-radius: 3px; 
+}
+/*ends here ~ common css*/
+
+/*body content apart from footer and navbar*/
+
+/*for index.html*/
+.indexBodyContainer .completeIndexBox {
+	min-height: 250px;
+}
+.blueBackgroundHeading {
+	background: #D9EDF6;
+}
+.blueBackgroundHeading h1 {
+	color: #3E749D;
+}
+
+/*ends here ~ for index.html */
+
+
+/*for rgb.html*/
+.lightRedBackgroundHeading {
+	background: #F2DEDF;
+}
+.lightRedBackgroundHeading h1 {
+	color: #AB4745;
+}
+.lightGreenBackgroundHeading {
+	background: #DCEED6;
+}
+.lightGreenBackgroundHeading h1 {
+	color: #4D843A;
+}
+.lightRedBox {
+	border: solid 1px #F2DEDF;
+	border-radius: 3px; 
+}
+.lightGreenBox {
+	border: solid 1px #DCEED6;
+	border-radius: 3px; 
+}
+/*.rgbTableDiv {
+	background: #D5E8F1;
+}*/
+.rgbTable {
+	text-align: center;
+	background: #D5E8F1;
+}
+.generateRandomColorBtn {
+	background: #792756;
+	color: white;
+	margin-top: 45px;
+}
+.generateRandomColorBtn:hover {
+	color: white;
+}
+.randomColorTable {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*ends here ~ rbg.html*/
+
+/*for web safe page*/
+.indexBodyContainer .completeWebSafeBox {
+	min-height: 140px;
+}
+/*ends here ~ for web safe page*/
+
+/*for contact page*/
+.contactTab {
+	background: #D9EDF6;
+	text-align: center;
+	color: #679DB7;
+	/*margin-top: -20px;*/
+	padding: 20px;
+}
+.contactImgIcon {
+	width: 25px; 
+	margin-right: 10px;
+}
+.navTabsContact a {
+	color: #B66760;
+	font-weight: bold;
+}
+/*ends here ~ for contact page*/
+
+/*ends here ~ body content apart from footer and navbar
+
+/*style for responsiveness*/
+@media (max-width: 720px) {
+	table.rgbTable>thead>tr>th {
+		vertical-align: middle;
+	}
+	.responsiveMarginTop {
+		margin-top: 65px;
+	}
+}
+@media (min-width: 720px) {
+	.colorPickerBoxes {
+		white-space: nowrap;
+	}
+	table.rgbTable>thead>tr>th {
+		white-space: nowrap;
+	}	
+}
+@media (min-width: 720px) and (max-width: 992px) {
+	.responsiveMarginTop {
+		margin-top: 50px;
+	}
+}
+@media (min-width: 992px) {
+	.responsiveMarginTop {
+		margin-top: 15px;
+	}
+}
+
+/*ends here ~ style for responsiveness*/

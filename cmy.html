@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Color Modals</title>
+
+<!-- required library or plugin css files -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- ends here ~ required library or plugin css files -->
+
+<!-- custom files -->
+<link rel="stylesheet" href="css/style.css">
+<!-- ends here ~ custom files -->
+
+</head>
+<body>
+
+<!-- navbar -->
+
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top navbarCustom" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Color Modals</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rgb.html">RGB</a></li>
+                <li><a href="cmy.html">CMY</a></li>
+                <li><a href="web-safe-colors.html">Web Safe Colors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ends here ~ navbar -->
+
+
+<!-- other body content apart from footer and navbar -->
+
+<div class="container indexBodyContainer">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-5 lightRedBox padding0px">
+                <div class="col-md-12 lightRedBackgroundHeading">
+                    <h3><span>Cyan</span> <span>Magenta</span> <span>Yellow</span> (<span>C</span><span>M</span><span>Y</span>)</h3>
+                </div>
+                <div class="col-md-12">
+                    <p>
+                        <b><span>C</span><span>M</span><span>Y</span>K</b> is an subtractive reflected light color model.wheel each color is stored in one byte.
+                    </p> 
+                    <p> 
+                        All possible combinations of <b><span>C</span><span>M</span><span>Y</span>K</b> give 2<sup>24</sup> different colors.
+                    </p>
+                    <p>
+                       Starting with <b>white</b> color, to which different color inks are added to absorb (subtract) light that is reflected.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5 col-md-push-2 padding0px lightGreenBox">
+                <div class="col-md-12 lightGreenBackgroundHeading">
+                    <h3><span>Cyan</span> <span>Magenta</span> <span>Yellow</span> (<span>C</span><span>M</span><span>Y</span>)</h3>
+                </div>
+                <div class="col-md-12 colorPickerBoxes">
+                    <h3>Select <b><span>C</span><span>M</span><span>Y</span></b> Values</h3>
+                    <div class="col-md-4 col-xs-4">
+                        <span>Cyan</span> <select name="cmyCyanDropdown" id="cmyCyanDropdown" onchange="displayCMYColor()"></select>
+                    </div> 
+                    <div class="col-md-4 col-xs-4">
+                        <span>Magenta</span> <select name="cmyMagentaDropdown" id="cmyMagentaDropdown" onchange="displayCMYColor()"></select>
+                    </div> 
+                    <div class="col-md-4 col-xs-4">
+                        <span>Yellow</span> <select name="cmyYellowDropdown" id="cmyYellowDropdown" onchange="displayCMYColor()"></select>
+                    </div> 
+                </div>
+                <div class="col-md-12 responsiveMarginTop rgbTableDiv padding0px">
+                    <table class="rgbTable table">
+                        <thead>
+                            <th class="col-md-5">RGB Float Values</th>
+                            <th class="col-md-6">RGB Hexadecimal Values</th>
+                            <th class="col-md-1">Display</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="rgbTableFloatValue"></td>
+                                <td id="rgbTableHexValue"></td>
+                                <td class="padding0px" id="rgbTableDisplayColor"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ends here ~ body content -->
+
+<!-- footer content -->
+<div class="footer">
+  <p>&copy 2020. Ship of Curiosity. All rights reserved.</p>
+</div>
+<!-- ends here ~ footer content  -->
+
+</body>
+    <!-- required plugin or library js files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ends here ~ required plugin or library js files -->
+
+    <!-- custom js files -->
+    <script src="js/script.js"></script>
+    <!-- ends here ~ custom js files -->
+
+    <!-- internal script -->
+    <script type="text/javascript">
+        setValues('cmy');
+        cmy()
+    </script>
+    <!-- ends here ~ internal script -->
+</html>                            

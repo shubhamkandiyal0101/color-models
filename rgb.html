@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Color Modals</title>
+
+<!-- required library or plugin css files -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- ends here ~ required library or plugin css files -->
+
+<!-- custom files -->
+<link rel="stylesheet" href="css/style.css">
+<!-- ends here ~ custom files -->
+
+</head>
+<body>
+
+<!-- navbar -->
+
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top navbarCustom" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Color Modals</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rgb.html">RGB</a></li>
+                <li><a href="cmy.html">CMY</a></li>
+                <li><a href="web-safe-colors.html">Web Safe Colors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ends here ~ navbar -->
+
+
+<!-- other body content apart from footer and navbar -->
+
+<div class="container indexBodyContainer">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-5 lightRedBox padding0px">
+                <div class="col-md-12 lightRedBackgroundHeading">
+                    <h1><span>Red</span> <span>Green</span> <span>Blue</span> (<span>R</span><span>G</span><span>B</span>)</h1>
+                </div>
+                <div class="col-md-12">
+                    <p>
+                        <span>R</span><span>G</span><span>B</span> <i>is an additive projected light color model where each color is stored in one byte</i>.
+                    </p> 
+                    <p> 
+                        All possible combinations or <span>red</span>,<span>green</span> and <span>blue</span> give 2<sup>24</sup>=16,777,216 different colors.
+                    </p>
+                    <p>
+                        Starting with(<span>Red</span>, <span>Green</span>, <span>Blue</span>)=(<span>0</span>, <span>0</span>, <span>0</span>)(black), to which different color "lights" are added to produce visible colors.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5 col-md-push-2 padding0px lightGreenBox">
+                <div class="col-md-12 lightGreenBackgroundHeading">
+                    <h1><span>Red</span> <span>Green</span> <span>Blue</span> (<span>R</span><span>G</span><span>B</span>)</h1>
+                </div>
+                <div class="col-md-12">
+                    <h3>Select <b><span>R</span><span>G</span><span>B</span></b> Values</h3>
+                    <div class="col-md-4 col-xs-4">
+                        <span>Red</span> <select name="rgbRedDropdown" id="rgbRedDropdown" onchange="displayRGBColor()"></select>
+                    </div> 
+                    <div class="col-md-4 col-xs-4">
+                        <span>Green</span> <select name="rgbGreenDropdown" id="rgbGreenDropdown" onchange="displayRGBColor()"></select>
+                    </div> 
+                    <div class="col-md-4 col-xs-4">
+                        <span>Blue</span> <select name="rgbBlueDropdown" id="rgbBlueDropdown" onchange="displayRGBColor()"></select>
+                    </div> 
+                </div>
+                <div class="col-md-12 responsiveMarginTop rgbTableDiv padding0px">
+                    <table class="rgbTable table">
+                        <thead>
+                            <th class="col-md-5 col-sm-5"><span>R</span><span>G</span><span>B</span> Float Values</th>
+                            <th class="col-md-6 col-sm-6"><span>R</span><span>G</span><span>B</span> Hexadecimal Values</th>
+                            <th class="col-md-1 col-sm-1">Display</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="rgbTableFloatValue"></td>
+                                <td id="rgbTableHexValue"></td>
+                                <td class="padding0px" id="rgbTableDisplayColor"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 textAlignCenter">
+            <button class="btn generateRandomColorBtn" onclick="generateRandomColors()">Generate Random Colors</button>
+
+            <table class="table randomColorTable" id="completeRandomColorTable" style="display: none;">
+                <thead>
+                    <th>RGB Float Values</th>
+                    <th>RGB Hexadecimal Values</th>
+                    <th>Display</th>
+                </thead>
+                <tbody id="randomColorTableBody">
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<!-- ends here ~ body content -->
+
+<!-- footer content -->
+<div class="footer">
+  <p>&copy 2020. Ship of Curiosity. All rights reserved.</p>
+</div>
+<!-- ends here ~ footer content  -->
+
+</body>
+    <!-- required plugin or library js files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ends here ~ required plugin or library js files -->
+
+    <!-- custom js files -->
+    <script src="js/script.js"></script>
+    <!-- ends here ~ custom js files -->
+
+    <!-- internal script -->
+    <script type="text/javascript">
+        setValues('rgb');
+        rgb();
+    </script>
+    <!-- ends here ~ internal script -->
+</html>                            
